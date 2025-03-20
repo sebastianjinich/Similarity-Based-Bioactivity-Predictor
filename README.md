@@ -1,7 +1,7 @@
 # Similarity-Based Bioactivity Predictor (Dockerized)
 
 ## Overview
-This script predicts the bioactivity of chemical compounds based on similarity measures. It utilizes molecular fingerprints, similarity functions, and different scoring methods to estimate the activity of unknown compounds relative to a known dataset.
+This algorithm predicts the bioactivity of chemical compounds based on similarity measures. It utilizes molecular fingerprints, similarity functions, and different scoring methods to estimate the activity of unknown compounds relative to a known dataset.
 
 
 ## Data Used in the Predictor
@@ -94,7 +94,7 @@ Execute the script within the Docker container using bind mounts to ensure data 
 docker run -it \
     --mount type=bind,src=./data,dst=/root/similarity_activity_predictor/data \
     --mount type=bind,src=./predictions,dst=/root/similarity_activity_predictor/predictions \
-    sebastianjinich/similarity_activity_predictor:04 \
+    sebastianjinich/similarity_activity_predictor:latest \
         --known_dataset_csv data/train_data_example.csv \
         --predict_csv data/predict_data_example.csv \
         --output_path_csv predictions/prediction_example.csv
