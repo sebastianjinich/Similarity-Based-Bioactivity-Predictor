@@ -11,7 +11,7 @@ def similarity_softmax_bioactivity_predictor(dataset_train:pd.DataFrame,dataset_
     train_positives = train_positives.reset_index(drop=True)
 
     train_negatives = dataset_train[dataset_train.bioactivity == 0]
-    train_negatives = dataset_train.reset_index(drop=True)
+    train_negatives = train_negatives.reset_index(drop=True)
 
     predict_output["positive_comps_similarity"] = calculate_similiarity_scores(predict_output,train_positives,similarity_scorer,fps_generator,similarity_function)["pred_score"]
     predict_output["negative_comps_similarity"] = calculate_similiarity_scores(predict_output,train_negatives,similarity_scorer,fps_generator,similarity_function)["pred_score"]
