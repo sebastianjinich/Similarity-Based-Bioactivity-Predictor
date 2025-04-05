@@ -61,6 +61,9 @@ The predictive model is based on the assumption that **chemically similar compou
    
 This process results in a final score that represents the likelihood of the compound being bioactive based on its structural similarity to known active and inactive compounds.
 
+
+![Predictive algorithm scheme](alogrithm.png)
+
 ## Usage of the container
 
 ## What is Docker?
